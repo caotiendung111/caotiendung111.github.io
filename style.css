@@ -178,6 +178,68 @@ a {
   box-shadow: 0 0 15px var(--primary-glow);
 }
 
+/* Language Switcher (Web Only) - Premium Glassmorphism */
+.language-switcher {
+  display: flex;
+  background: rgba(17, 24, 39, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+  gap: 4px;
+  box-shadow: var(--shadow-sm), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+  align-items: center;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="light"] .language-switcher {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(15, 23, 42, 0.08);
+  box-shadow: var(--shadow-sm), inset 0 1px 1px rgba(15, 23, 42, 0.03);
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  padding: 6px 12px;
+  border-radius: calc(var(--radius-sm) - 2px);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 36px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.lang-btn:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="light"] .lang-btn:hover {
+  background: rgba(15, 23, 42, 0.04);
+}
+
+.lang-btn.active {
+  background: var(--primary);
+  color: var(--text-inverse) !important;
+  box-shadow: 0 4px 12px var(--primary-glow);
+  transform: scale(1.04);
+}
+
+/* Light theme overrides for active switcher button */
+[data-theme="light"] .lang-btn.active {
+  background: var(--primary);
+  color: var(--text-inverse) !important;
+  box-shadow: 0 4px 12px var(--primary-glow);
+}
+
 /* Filter Tab Bar (Web Only) */
 .filter-bar-container {
   max-width: var(--cv-width);
@@ -822,7 +884,7 @@ a {
   }
   
   .cv-header {
-    padding: 10mm 12mm 4mm 12mm !important;
+    padding: 8mm 12mm 4mm 12mm !important;
     border-bottom: 2px solid #047857 !important;
   }
   
@@ -835,10 +897,20 @@ a {
   .cv-sidebar {
     padding: 5mm 6mm 5mm 12mm !important;
     height: 100% !important;
+    gap: 12px !important;
+  }
+
+  .sidebar-section {
+    gap: 6px !important;
   }
   
   .cv-main-content {
     padding: 5mm 12mm 5mm 6mm !important;
+    gap: 12px !important;
+  }
+
+  .projects-timeline {
+    gap: 12px !important;
   }
   
   .project-card {
@@ -846,8 +918,8 @@ a {
     background: #ffffff !important;
     box-shadow: none !important;
     transform: none !important;
-    margin-bottom: 2.5mm !important;
-    padding: 10px 14px !important;
+    margin-bottom: 2mm !important;
+    padding: 8px 12px !important;
     page-break-inside: avoid !important;
   }
   

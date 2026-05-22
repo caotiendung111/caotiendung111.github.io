@@ -23,13 +23,24 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateThemeButtonUI(theme) {
     const icon = themeToggleBtn.querySelector('i');
     const text = themeToggleBtn.querySelector('span');
+    const currentLang = localStorage.getItem('cv-lang') || 'en';
     
     if (theme === 'dark') {
       icon.className = 'fas fa-sun';
-      text.textContent = 'Light Mode';
+      text.setAttribute('data-translate', 'ui_theme_light');
+      if (window.translations && translations[currentLang]) {
+        text.innerHTML = translations[currentLang]['ui_theme_light'];
+      } else {
+        text.textContent = 'Light Mode';
+      }
     } else {
       icon.className = 'fas fa-moon';
-      text.textContent = 'Dark Mode';
+      text.setAttribute('data-translate', 'ui_theme_dark');
+      if (window.translations && translations[currentLang]) {
+        text.innerHTML = translations[currentLang]['ui_theme_dark'];
+      } else {
+        text.textContent = 'Dark Mode';
+      }
     }
   }
 
@@ -82,16 +93,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const printPdfBtn = document.getElementById('print-pdf');
   
   printPdfBtn.addEventListener('click', () => {
-    // Briefly alert user about standard settings for best results
-    const confirmPrint = confirm(
-      "Click OK to open the Print Dialog.\n\n" +
-      "For a perfect CV export:\n" +
-      "1. Set Destination to 'Save as PDF'.\n" +
-      "2. Enable 'Background graphics' (so theme highlights load correctly).\n" +
-      "3. Disable 'Headers and footers' (to remove browser links)."
-    );
+    const currentLang = localStorage.getItem('cv-lang') || 'en';
+    const confirmText = (window.translations && translations[currentLang] && translations[currentLang]['print_confirm_text']) 
+      ? translations[currentLang]['print_confirm_text'] 
+      : "Click OK to open the Print Dialog.\n\nFor a perfect CV export:\n1. Set Destination to 'Save as PDF'.\n2. Enable 'Background graphics' (so theme highlights load correctly).\n3. Disable 'Headers and footers' (to remove browser links).";
     
-    if (confirmPrint) {
+    if (confirm(confirmText)) {
       window.print();
     }
   });
@@ -111,6 +118,52 @@ document.addEventListener('DOMContentLoaded', () => {
       tag.style.transform = 'translateY(0) scale(1)';
     });
   });
+
+  // ==========================================================================
+  // 5. DYNAMIC TRANSLATION ENGINE
+  // ==========================================================================
+  const langButtons = document.querySelectorAll('.lang-btn');
+  
+  // Set initial language from localStorage or default to 'en'
+  const initialLang = localStorage.getItem('cv-lang') || 'en';
+  setLanguage(initialLang);
+  
+  langButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-lang');
+      localStorage.setItem('cv-lang', lang);
+      setLanguage(lang);
+    });
+  });
+  
+  function setLanguage(lang) {
+    // Update active class on language buttons
+    langButtons.forEach(btn => {
+      if (btn.getAttribute('data-lang') === lang) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+    
+    // Set Document lang attribute
+    document.documentElement.setAttribute('lang', lang);
+    
+    // Translate all elements with [data-translate]
+    if (window.translations && translations[lang]) {
+      const translatable = document.querySelectorAll('[data-translate]');
+      translatable.forEach(el => {
+        const key = el.getAttribute('data-translate');
+        if (translations[lang][key] !== undefined) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+      
+      // Update the theme toggle button's label with correct translation
+      const theme = htmlElement.getAttribute('data-theme') || 'dark';
+      updateThemeButtonUI(theme);
+    }
+  }
 });
 
 // Keyframes injected dynamically for sleek web experience

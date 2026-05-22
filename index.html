@@ -26,13 +26,18 @@
         <span class="logo-text">PORTFOLIO CV</span>
       </div>
       <div class="action-buttons">
+        <div class="language-switcher no-print">
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="vi">VI</button>
+          <button class="lang-btn" data-lang="ja">JA</button>
+        </div>
         <button id="theme-toggle" class="control-btn" title="Toggle Theme">
           <i class="fas fa-moon"></i>
-          <span>Dark Mode</span>
+          <span data-translate="ui_theme_dark">Dark Mode</span>
         </button>
         <button id="print-pdf" class="control-btn primary-btn" title="Export High-Quality PDF">
           <i class="fas fa-file-pdf"></i>
-          <span>Export to PDF</span>
+          <span data-translate="ui_print_pdf">Export to PDF</span>
         </button>
       </div>
     </div>
@@ -41,10 +46,10 @@
   <!-- Interactive Project Filters (Web Only) -->
   <div class="filter-bar-container no-print">
     <div class="filter-bar">
-      <span class="filter-label">Filter Projects:</span>
-      <button class="filter-tab active" data-filter="all">All Projects</button>
-      <button class="filter-tab" data-filter="ai-cv">AI & Computer Vision</button>
-      <button class="filter-tab" data-filter="embedded">Embedded & IoT</button>
+      <span class="filter-label" data-translate="ui_filter_label">Filter Projects:</span>
+      <button class="filter-tab active" data-filter="all" data-translate="ui_all_projects">All Projects</button>
+      <button class="filter-tab" data-filter="ai-cv" data-translate="ui_ai_cv">AI & Computer Vision</button>
+      <button class="filter-tab" data-filter="embedded" data-translate="ui_embedded_iot">Embedded & IoT</button>
     </div>
   </div>
 
@@ -63,8 +68,8 @@
         </div>
         
         <div class="name-title-area">
-          <h1 class="candidate-name">CAO TIEN DUNG</h1>
-          <h2 class="candidate-title">Embedded Systems & AI Engineer</h2>
+          <h1 class="candidate-name" data-translate="candidate_name">CAO TIEN DUNG</h1>
+          <h2 class="candidate-title" data-translate="candidate_title">Embedded Systems & AI Engineer</h2>
           
           <!-- Contact Row -->
           <div class="contact-grid">
@@ -96,18 +101,18 @@
         
         <!-- Profile Summary -->
         <section class="sidebar-section">
-          <h3 class="section-title"><i class="fas fa-user-circle"></i> Profile</h3>
-          <p class="profile-text">
+          <h3 class="section-title"><i class="fas fa-user-circle"></i> <span data-translate="title_profile">Profile</span></h3>
+          <p class="profile-text" data-translate="profile_text">
             Senior Computer Systems Engineering student at Da Nang University of Science and Technology (DUT) with a proven dual foundation in Embedded Systems/IoT and Artificial Intelligence/Computer Vision. Developer of multiple production-ready AI applications, secure biometric locks, and microcontroller integrations. Seeking a professional internship to leverage software engineering, real-time hardware debugging, and edge AI deployment skills to build intelligent, high-performance systems.
           </p>
         </section>
 
         <!-- Technical Skills -->
         <section class="sidebar-section">
-          <h3 class="section-title"><i class="fas fa-tools"></i> Technical Skills</h3>
+          <h3 class="section-title"><i class="fas fa-tools"></i> <span data-translate="title_skills">Technical Skills</span></h3>
           
           <div class="skill-category">
-            <h4>Programming</h4>
+            <h4 data-translate="skill_programming">Programming</h4>
             <div class="skill-tags">
               <span class="skill-tag">C/C++ (OOP)</span>
               <span class="skill-tag">Python</span>
@@ -118,7 +123,7 @@
           </div>
 
           <div class="skill-category">
-            <h4>Embedded & Hardware</h4>
+            <h4 data-translate="skill_embedded">Embedded & Hardware</h4>
             <div class="skill-tags">
               <span class="skill-tag">STM32 (CubeIDE)</span>
               <span class="skill-tag">ESP32</span>
@@ -132,7 +137,7 @@
           </div>
 
           <div class="skill-category">
-            <h4>AI & Computer Vision</h4>
+            <h4 data-translate="skill_ai">AI & Computer Vision</h4>
             <div class="skill-tags">
               <span class="skill-tag">PyTorch</span>
               <span class="skill-tag">OpenCV</span>
@@ -144,7 +149,7 @@
           </div>
 
           <div class="skill-category">
-            <h4>Web & Infrastructure</h4>
+            <h4 data-translate="skill_web">Web & Infrastructure</h4>
             <div class="skill-tags">
               <span class="skill-tag">FastAPI</span>
               <span class="skill-tag">Streamlit</span>
@@ -158,37 +163,37 @@
 
         <!-- Education -->
         <section class="sidebar-section">
-          <h3 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+          <h3 class="section-title"><i class="fas fa-graduation-cap"></i> <span data-translate="title_education">Education</span></h3>
           <div class="education-block">
-            <span class="education-dates">2022 - Present</span>
-            <h4 class="school-name">Da Nang University of Science and Technology (DUT)</h4>
-            <p class="degree-info">Bachelor of Engineering in Computer Systems</p>
-            <p class="degree-details">Faculty of Electronics & Telecommunications</p>
-            <p class="gpa-badge">Cumulative GPA: 3.15 / 4.0</p>
+            <span class="education-dates" data-translate="edu_dates">2022 - Present</span>
+            <h4 class="school-name" data-translate="edu_school">Da Nang University of Science and Technology (DUT)</h4>
+            <p class="degree-info" data-translate="edu_degree">Bachelor of Engineering in Computer Systems</p>
+            <p class="degree-details" data-translate="edu_details">Faculty of Electronics & Telecommunications</p>
+            <p class="gpa-badge" data-translate="edu_gpa">Cumulative GPA: 3.15 / 4.0</p>
           </div>
         </section>
 
         <!-- Languages -->
         <section class="sidebar-section">
-          <h3 class="section-title"><i class="fas fa-language"></i> Languages</h3>
+          <h3 class="section-title"><i class="fas fa-language"></i> <span data-translate="title_languages">Languages</span></h3>
           <ul class="languages-list">
             <li>
-              <span class="lang-name">English</span>
-              <span class="lang-detail">TOEIC 650 (Intermediate, technical reading)</span>
+              <span class="lang-name" data-translate="lang_english">English</span>
+              <span class="lang-detail" data-translate="lang_english_detail">TOEIC 650 (Intermediate, technical reading)</span>
             </li>
             <li>
-              <span class="lang-name">Japanese</span>
-              <span class="lang-detail">JLPT N4 (Pursuing N3, conversational)</span>
+              <span class="lang-name" data-translate="lang_japanese">Japanese</span>
+              <span class="lang-detail" data-translate="lang_japanese_detail">JLPT N4 (Pursuing N3, conversational)</span>
             </li>
           </ul>
         </section>
 
         <!-- Certifications -->
         <section class="sidebar-section">
-          <h3 class="section-title"><i class="fas fa-certificate"></i> Certifications</h3>
+          <h3 class="section-title"><i class="fas fa-certificate"></i> <span data-translate="title_certifications">Certifications</span></h3>
           <ul class="certs-list">
-            <li><strong>C/C++ Programming</strong> - Codelearn</li>
-            <li><strong>Python Programming</strong> - Coursera</li>
+            <li data-translate="cert_cpp"><strong>C/C++ Programming</strong> - Codelearn</li>
+            <li data-translate="cert_python"><strong>Python Programming</strong> - Coursera</li>
           </ul>
         </section>
 
@@ -198,14 +203,14 @@
       <section class="cv-main-content">
         
         <div class="section-header-main">
-          <h3 class="main-section-title"><i class="fas fa-project-diagram"></i> Key Engineering Projects</h3>
+          <h3 class="main-section-title"><i class="fas fa-project-diagram"></i> <span data-translate="title_projects">Key Engineering Projects</span></h3>
         </div>
 
         <div class="projects-timeline">
           
           <!-- ==================== CATEGORY: EMBEDDED SYSTEMS & IOT ==================== -->
           <div class="project-group-divider no-print" data-group="embedded">
-            <span>EMBEDDED SYSTEMS & INTERNET OF THINGS</span>
+            <span data-translate="divider_embedded">EMBEDDED SYSTEMS & INTERNET OF THINGS</span>
           </div>
 
           <!-- Project: Tourism Management -->
@@ -213,7 +218,7 @@
             <div class="project-header">
               <div class="title-tech">
                 <h4 class="project-title">
-                  <a href="https://github.com/caotiendung111/PBl1-Quanlitourdulich.2022-2023" target="_blank" class="project-link">
+                  <a href="https://github.com/caotiendung111/PBl1-Quanlitourdulich.2022-2023" target="_blank" class="project-link" data-translate="p1_title">
                     Tourism & Shopee E-Commerce Simulator
                   </a>
                 </h4>
@@ -231,11 +236,11 @@
               <span class="project-date">2022 - 2023</span>
             </div>
             <div class="project-body">
-              <p class="project-description">
+              <p class="project-description" data-translate="p1_desc">
                 Developed a C++ terminal application simulating real-life travel reservation flows and Shopee catalog transactions.
               </p>
               <ul class="project-bullets">
-                <li>Designed robust class architectures utilizing composition, inheritance, and dynamic pointer allocation to master fundamental memory boundaries in standard C++.</li>
+                <li data-translate="p1_bullet1">Designed robust class architectures utilizing composition, inheritance, and dynamic pointer allocation to master fundamental memory boundaries in standard C++.</li>
               </ul>
             </div>
           </article>
@@ -245,7 +250,7 @@
             <div class="project-header">
               <div class="title-tech">
                 <h4 class="project-title">
-                  <a href="https://github.com/caotiendung111" target="_blank" class="project-link">
+                  <a href="https://github.com/caotiendung111" target="_blank" class="project-link" data-translate="p2_title">
                     OCL Audio Power Amplifier Circuit Design
                   </a>
                 </h4>
@@ -263,13 +268,13 @@
               <span class="project-date">2024 - 2025</span>
             </div>
             <div class="project-body">
-              <p class="project-description">
+              <p class="project-description" data-translate="p2_desc">
                 Researched, designed, and manufactured a physical Output Capacitor-Less (OCL) high-fidelity analog audio power amplifier.
               </p>
               <ul class="project-bullets">
-                <li><strong>Hardware Design:</strong> Simulated analog stages inside Proteus, completed PCB schematics, and routed double-sided traces using Altium Designer.</li>
-                <li><strong>Manufacturing:</strong> Etched, drilled, and hand-soldered discrete components onto the physical board, executing rigorous thermal management procedures.</li>
-                <li><strong>Validation:</strong> Verified signal stability with oscilloscopes, obtaining high signal-to-noise ratio output with zero cross-over distortion.</li>
+                <li data-translate="p2_bullet1"><strong>Hardware Design:</strong> Simulated analog stages inside Proteus, completed PCB schematics, and routed double-sided traces using Altium Designer.</li>
+                <li data-translate="p2_bullet2"><strong>Manufacturing:</strong> Etched, drilled, and hand-soldered discrete components onto the physical board, executing rigorous thermal management procedures.</li>
+                <li data-translate="p2_bullet3"><strong>Validation:</strong> Verified signal stability with oscilloscopes, obtaining high signal-to-noise ratio output with zero cross-over distortion.</li>
               </ul>
             </div>
           </article>
@@ -279,7 +284,7 @@
             <div class="project-header">
               <div class="title-tech">
                 <h4 class="project-title">
-                  <a href="https://github.com/caotiendung111/duanbangchuyen_nhom1_hethongnhung_AI_FIREBASE" target="_blank" class="project-link">
+                  <a href="https://github.com/caotiendung111/duanbangchuyen_nhom1_hethongnhung_AI_FIREBASE" target="_blank" class="project-link" data-translate="p3_title">
                     AI-Based Automatic Sorting Conveyor System | PBL4
                   </a>
                 </h4>
@@ -298,13 +303,13 @@
               <span class="project-date">2025</span>
             </div>
             <div class="project-body">
-              <p class="project-description">
+              <p class="project-description" data-translate="p3_desc">
                 Engineered an industrial-scale automated sorting assembly belt connecting microcontrollers and computer vision modules.
               </p>
               <ul class="project-bullets">
-                <li><strong>Microcontroller Core:</strong> Designed the master scheduler on an STM32 MCU written in C++ object-oriented style, ensuring precise servo/DC motor synchronization for sorting actions.</li>
-                <li><strong>Edge Vision Integration:</strong> Developed a communication channel between the STM32 controller and a local computer processing OpenCV camera feeds to scan QR/barcodes and categorize assets.</li>
-                <li><strong>Cloud Ecosystem:</strong> Connected ESP32 modules to sync sorting tallies to a Firebase Realtime Database and handled automated banking QR payment triggers.</li>
+                <li data-translate="p3_bullet1"><strong>Microcontroller Core:</strong> Designed the master scheduler on an STM32 MCU written in C++ object-oriented style, ensuring precise servo/DC motor synchronization for sorting actions.</li>
+                <li data-translate="p3_bullet2"><strong>Edge Vision Integration:</strong> Developed a communication channel between the STM32 controller and a local computer processing OpenCV camera feeds to scan QR/barcodes and categorize assets.</li>
+                <li data-translate="p3_bullet3"><strong>Cloud Ecosystem:</strong> Connected ESP32 modules to sync sorting tallies to a Firebase Realtime Database and handled automated banking QR payment triggers.</li>
               </ul>
             </div>
           </article>
@@ -314,7 +319,7 @@
             <div class="project-header">
               <div class="title-tech">
                 <h4 class="project-title">
-                  <a href="https://github.com/caotiendung111/Du-An-Bao-Chay-IOT-AI-WEBSEVER1" target="_blank" class="project-link">
+                  <a href="https://github.com/caotiendung111/Du-An-Bao-Chay-IOT-AI-WEBSEVER1" target="_blank" class="project-link" data-translate="p4_title">
                     FireGuard IoT — AI Smart Fire Alarm System
                   </a>
                 </h4>
@@ -333,13 +338,13 @@
               <span class="project-date">2025 - 2026</span>
             </div>
             <div class="project-body">
-              <p class="project-description">
+              <p class="project-description" data-translate="p4_desc">
                 Invented a smart fire inspection framework bridging local embedded sensor nodes and visual deep learning modules.
               </p>
               <ul class="project-bullets">
-                <li><strong>Sensor Logic:</strong> Configured ESP32 microcontrollers to interface with flame and smoke sensors, managing automated physical alarm actuators (buzzers, water pumps).</li>
-                <li><strong>False Alarm Control:</strong> Programmed a local temporal 10-frame noise filtering routine on visual feeds, dropping false smoke reports by over **90%**.</li>
-                <li><strong>Remote Communication:</strong> Deployed automated Telegram alerts with live capture images and GPS location data upon fire validation.</li>
+                <li data-translate="p4_bullet1"><strong>Sensor Logic:</strong> Configured ESP32 microcontrollers to interface with flame and smoke sensors, managing automated physical alarm actuators (buzzers, water pumps).</li>
+                <li data-translate="p4_bullet2"><strong>False Alarm Control:</strong> Programmed a local temporal 10-frame noise filtering routine on visual feeds, dropping false smoke reports by over **90%**.</li>
+                <li data-translate="p4_bullet3"><strong>Remote Communication:</strong> Deployed automated Telegram alerts with live capture images and GPS location data upon fire validation.</li>
               </ul>
             </div>
           </article>
@@ -349,7 +354,7 @@
 
           <!-- ==================== CATEGORY: AI & COMPUTER VISION ==================== -->
           <div class="project-group-divider no-print" data-group="ai-cv">
-            <span>ARTIFICIAL INTELLIGENCE & COMPUTER VISION</span>
+            <span data-translate="divider_ai">ARTIFICIAL INTELLIGENCE & COMPUTER VISION</span>
           </div>
 
           <!-- Project: TrafficAI -->
@@ -357,7 +362,7 @@
             <div class="project-header">
               <div class="title-tech">
                 <h4 class="project-title">
-                  <a href="https://github.com/caotiendung111/AI-Traffic-Intelligence-Revenue-Ecosystem_MonTriTueNhanTao" target="_blank" class="project-link">
+                  <a href="https://github.com/caotiendung111/AI-Traffic-Intelligence-Revenue-Ecosystem_MonTriTueNhanTao" target="_blank" class="project-link" data-translate="p5_title">
                     TrafficAI — LPR & Smart Vehicle Monitoring System
                   </a>
                 </h4>
@@ -376,13 +381,13 @@
               <span class="project-date">2025 - 2026</span>
             </div>
             <div class="project-body">
-              <p class="project-description">
+              <p class="project-description" data-translate="p5_desc">
                 Programmed a commercial-grade smart parking solution tracking vehicle counts and recognizing license plates instantly from real-time network streams.
               </p>
               <ul class="project-bullets">
-                <li><strong>Neural Pipeline:</strong> Fine-tuned a custom YOLOv8 detector combined with EasyOCR, optimized through Intel OpenVINO runtime, ensuring ultra-low latency inference on edge CPU architectures.</li>
-                <li><strong>Dashboard Architecture:</strong> Built a complete control dashboard with FastAPI and PWA support, handling complex search, soft-delete data bins, blacklist configurations, and visual audit logs.</li>
-                <li><strong>Defense Shield:</strong> Wrote custom middleware for IP-based rate limiting, WebSocket validation, and secure authentication to defend against malicious API flooding.</li>
+                <li data-translate="p5_bullet1"><strong>Neural Pipeline:</strong> Fine-tuned a custom YOLOv8 detector combined with EasyOCR, optimized through Intel OpenVINO runtime, ensuring ultra-low latency inference on edge CPU architectures.</li>
+                <li data-translate="p5_bullet2"><strong>Dashboard Architecture:</strong> Built a complete control dashboard with FastAPI and PWA support, handling complex search, soft-delete data bins, blacklist configurations, and visual audit logs.</li>
+                <li data-translate="p5_bullet3"><strong>Defense Shield:</strong> Wrote custom middleware for IP-based rate limiting, WebSocket validation, and secure authentication to defend against malicious API flooding.</li>
               </ul>
             </div>
           </article>
@@ -392,7 +397,7 @@
             <div class="project-header">
               <div class="title-tech">
                 <h4 class="project-title">
-                  <a href="https://github.com/caotiendung111/BioGuard_Face_Security_Mon_Tri_Tue_Nhan_Tao" target="_blank" class="project-link">
+                  <a href="https://github.com/caotiendung111/BioGuard_Face_Security_Mon_Tri_Tue_Nhan_Tao" target="_blank" class="project-link" data-translate="p6_title">
                     DeepLock Pro — Advanced Biometric Face Authentication
                   </a>
                 </h4>
@@ -410,13 +415,13 @@
               <span class="project-date">2026</span>
             </div>
             <div class="project-body">
-              <p class="project-description">
+              <p class="project-description" data-translate="p6_desc">
                 Developed a premium, real-time facial verification suite equipped with robust presentation attack detection (liveness analysis) and biometric database encryption.
               </p>
               <ul class="project-bullets">
-                <li><strong>Liveness Analysis (Anti-Spoofing):</strong> Implemented an active defense mechanism computing continuous Eye Aspect Ratio (EAR) across 15 frames alongside real-time Head Pose Estimation (Yaw/Pitch/Roll) to completely restrict print and screen replay attacks.</li>
-                <li><strong>Biometric Security:</strong> Extracted 128-D face descriptors and deployed encrypted database storage utilizing symmetric 128-bit AES Fernet cryptography with automated migration scripts.</li>
-                <li><strong>Image Enhancement:</strong> Integrated an adaptive light analyzer running Contrast Limited Adaptive Histogram Equalization (CLAHE) in the LAB color space, doubling face-matching accuracy in dark environments.</li>
+                <li data-translate="p6_bullet1"><strong>Liveness Analysis (Anti-Spoofing):</strong> Implemented an active defense mechanism computing continuous Eye Aspect Ratio (EAR) across 15 frames alongside real-time Head Pose Estimation (Yaw/Pitch/Roll) to completely restrict print and screen replay attacks.</li>
+                <li data-translate="p6_bullet2"><strong>Biometric Security:</strong> Extracted 128-D face descriptors and deployed encrypted database storage utilizing symmetric 128-bit AES Fernet cryptography with automated migration scripts.</li>
+                <li data-translate="p6_bullet3"><strong>Image Enhancement:</strong> Integrated an adaptive light analyzer running Contrast Limited Adaptive Histogram Equalization (CLAHE) in the LAB color space, doubling face-matching accuracy in dark environments.</li>
               </ul>
             </div>
           </article>
@@ -426,7 +431,7 @@
             <div class="project-header">
               <div class="title-tech">
                 <h4 class="project-title">
-                  <a href="https://github.com/caotiendung111/DeepGuard-Deepfake-Detection" target="_blank" class="project-link">
+                  <a href="https://github.com/caotiendung111/DeepGuard-Deepfake-Detection" target="_blank" class="project-link" data-translate="p7_title">
                     DeepGuard — AI-Powered Deepfake Detection System
                   </a>
                 </h4>
@@ -445,13 +450,13 @@
               <span class="project-date">2026</span>
             </div>
             <div class="project-body">
-              <p class="project-description">
+              <p class="project-description" data-translate="p7_desc">
                 Engineered a state-of-the-art production-ready deep learning pipeline designed to inspect and identify manipulated digital facial images and video records.
               </p>
               <ul class="project-bullets">
-                <li><strong>Machine Learning:</strong> Trained an EfficientNet-B4 classification framework, achieving a benchmark **0.985 AUC-ROC** and **0.962 F1-score** on joint FaceForensics++ and Celeb-DF test sets.</li>
-                <li><strong>Explainable AI (XAI):</strong> Integrated Captum LayerGradCam algorithms to overlay heatmaps, pinpointing specific tampered facial areas to increase output interpretability.</li>
-                <li><strong>DevOps & Serving:</strong> Managed data version control utilizing DVC, developed high-performance REST endpoints with FastAPI, and containerized the pipeline via Docker Compose for uniform scaling.</li>
+                <li data-translate="p7_bullet1"><strong>Machine Learning:</strong> Trained an EfficientNet-B4 classification framework, achieving a benchmark **0.985 AUC-ROC** and **0.962 F1-score** on joint FaceForensics++ and Celeb-DF test sets.</li>
+                <li data-translate="p7_bullet2"><strong>Explainable AI (XAI):</strong> Integrated Captum LayerGradCam algorithms to overlay heatmaps, pinpointing specific tampered facial areas to increase output interpretability.</li>
+                <li data-translate="p7_bullet3"><strong>DevOps & Serving:</strong> Managed data version control utilizing DVC, developed high-performance REST endpoints with FastAPI, and containerized the pipeline via Docker Compose for uniform scaling.</li>
               </ul>
             </div>
           </article>
@@ -463,6 +468,7 @@
   </main>
 
   <!-- Core Logic Script -->
+  <script src="translations.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
