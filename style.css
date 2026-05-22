@@ -656,9 +656,44 @@ a {
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.project-link:hover .project-link-icon {
+.project-link-hover .project-link-icon {
   opacity: 0.9;
   transform: translateY(-1px);
+}
+
+.project-github-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 1px;
+  margin-bottom: 3px;
+}
+
+.project-github-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10.5px;
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: none;
+  word-break: break-all;
+  transition: opacity 0.2s ease, text-decoration 0.2s ease;
+}
+
+.project-card[data-category="ai-cv"] .project-github-link a {
+  color: var(--accent);
+}
+
+.project-github-link a:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+.project-github-link i {
+  font-size: 11px;
+  flex-shrink: 0;
+  color: var(--text-muted);
 }
 
 .project-date {
@@ -831,6 +866,16 @@ a {
   .project-bullets li {
     font-size: 9.5px !important;
     color: #334155 !important;
+  }
+  
+  .project-github-link a {
+    font-size: 8.5px !important;
+    color: #475569 !important;
+  }
+
+  .project-github-link i {
+    color: #475569 !important;
+    font-size: 9px !important;
   }
   
   .profile-text {
