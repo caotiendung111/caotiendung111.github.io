@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   
+  // Ensure translations is bound globally to window
+  if (typeof translations !== 'undefined') {
+    window.translations = translations;
+  }
   // ==========================================================================
   // 1. DYNAMIC THEME SWITCHER (Dark / Light Mode)
   // ==========================================================================

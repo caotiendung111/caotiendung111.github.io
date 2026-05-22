@@ -279,3 +279,6 @@ const translations = {
     print_confirm_text: "【OK】をクリックして印刷ダイアログを開きます。\n\n美しくPDFを出力するための設定：\n1. 送信先を「PDFとして保存」に設定します。\n2. 「背景のグラフィック」にチェックを入れて有効にします。\n3. 「ヘッダーとフッター」のチェックを外して無効にします。"
   }
 };
+
+// Explicitly bind to window to ensure global access in script.js
+window.translations = translations;
