@@ -23,7 +23,7 @@ const translations = {
     skill_web: "Web & Infrastructure",
     
     title_education: "Education",
-    edu_dates: "2022 -> (03-09)/2027",
+    edu_dates: "2022 -> (Mar-Sep)/2027",
     edu_school: "Da Nang University of Science and Technology (DUT)",
     edu_degree: "Bachelor of Engineering in Computer Systems",
     edu_details: "Faculty of Electronics & Telecommunications",
