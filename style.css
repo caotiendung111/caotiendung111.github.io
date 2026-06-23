@@ -864,12 +864,20 @@ a {
     --primary: #047857 !important;
     --accent: #1d4ed8 !important;
     --sidebar-gradient: #f8fafc !important;
-    --header-gradient: linear-gradient(135deg, #047857 0%, #1d4ed8 100%) !important;
+    --header-gradient: #047857 !important; /* Changed from linear-gradient to flat color to reduce PDF size */
   }
 
-  /* Completely strip away interactive web tools */
-  .no-print {
+  /* Completely strip away interactive web tools and heavy decorative elements */
+  .no-print, .cv-header::before, .project-group-divider::after {
     display: none !important;
+  }
+  
+  /* Disable heavy rendering features that bloat PDF size */
+  * {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
   }
   
   /* Remove shadow bounds and rounded canvas corners on page printing */
