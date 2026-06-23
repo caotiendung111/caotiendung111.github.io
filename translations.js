@@ -209,7 +209,7 @@ const translations = {
     skill_web: "Web & インフラ",
     
     title_education: "学歴",
-    edu_dates: "2022 -> (3月-9月)/2027",
+    edu_dates: "2022年 -> (3月-9月)/2027年",
     edu_school: "ダナン工科大学 (DUT)",
     edu_degree: "コンピュータシステム工学士",
     edu_details: "電子通信学部",
