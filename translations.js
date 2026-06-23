@@ -23,7 +23,7 @@ const translations = {
     skill_web: "Web & Infrastructure",
     
     title_education: "Education",
-    edu_dates: "2022 - Present",
+    edu_dates: "2022 -> (03-09)/2027",
     edu_school: "Da Nang University of Science and Technology (DUT)",
     edu_degree: "Bachelor of Engineering in Computer Systems",
     edu_details: "Faculty of Electronics & Telecommunications",
@@ -116,7 +116,7 @@ const translations = {
     skill_web: "Web & Hạ tầng",
     
     title_education: "Học vấn",
-    edu_dates: "2022 - Hiện tại",
+    edu_dates: "2022 -> (tháng 3-9)/2027",
     edu_school: "Trường Đại học Bách khoa - Đại học Đà Nẵng (DUT)",
     edu_degree: "Kỹ sư Kỹ thuật Hệ thống Máy tính",
     edu_details: "Khoa Điện tử - Viễn thông",
@@ -209,7 +209,7 @@ const translations = {
     skill_web: "Web & インフラ",
     
     title_education: "学歴",
-    edu_dates: "2022年 - 現在",
+    edu_dates: "2022 -> (3月-9月)/2027",
     edu_school: "ダナン工科大学 (DUT)",
     edu_degree: "コンピュータシステム工学士",
     edu_details: "電子通信学部",
