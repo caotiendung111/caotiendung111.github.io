@@ -841,30 +841,37 @@ a {
     margin: 0;
   }
   
-  /* Reset Body and eliminate unnecessary web spacing */
+  /* Force system light-mode color styling variables specifically for print layout accuracy */
+  :root {
+    --bg-main: #ffffff !important;
+    --bg-card: #ffffff !important;
+    --bg-sidebar: #ffffff !important;
+    --border-color: #e2e8f0 !important;
+    --text-main: #000000 !important;
+    --text-muted: #333333 !important;
+    --text-inverse: #000000 !important;
+    --primary: #000000 !important;
+    --accent: #000000 !important;
+    --sidebar-gradient: #ffffff !important;
+    --header-gradient: #ffffff !important; 
+  }
+
+  /* Reset Body and eliminate unnecessary web spacing, force system fonts to save PDF size */
+  body, h1, h2, h3, h4, p, span, div, a, li {
+    background-color: transparent !important;
+    color: #000000 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    border-color: #cccccc !important;
+  }
+  
   body {
-    background-color: #ffffff !important;
-    color: #1a1a1a !important;
     padding: 0 !important;
     margin: 0 !important;
     font-size: 10px;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
-  }
-  
-  /* Force system light-mode color styling variables specifically for print layout accuracy */
-  :root {
-    --bg-main: #ffffff !important;
-    --bg-card: #ffffff !important;
-    --bg-sidebar: #f8fafc !important;
-    --border-color: #e2e8f0 !important;
-    --text-main: #0f172a !important;
-    --text-muted: #475569 !important;
-    --text-inverse: #ffffff !important;
-    --primary: #047857 !important;
-    --accent: #1d4ed8 !important;
-    --sidebar-gradient: #f8fafc !important;
-    --header-gradient: #047857 !important; /* Changed from linear-gradient to flat color to reduce PDF size */
   }
 
   /* Completely strip away interactive web tools and heavy decorative elements */
@@ -878,6 +885,7 @@ a {
     -webkit-backdrop-filter: none !important;
     box-shadow: none !important;
     text-shadow: none !important;
+    background-image: none !important;
   }
   
   /* Remove shadow bounds and rounded canvas corners on page printing */
