@@ -1,0 +1,5 @@
+node_modules/
+package.json
+package-lock.json
+print_pdf.js
+test_output.pdf
