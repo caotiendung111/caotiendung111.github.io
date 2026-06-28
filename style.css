@@ -841,49 +841,54 @@ a {
     margin: 0;
   }
   
-  /* Force system light-mode color styling variables specifically for print layout accuracy */
+  /* Restore colors and avatar, but KEEP FontAwesome icons hidden to save 800KB */
   :root {
     --bg-main: #ffffff !important;
     --bg-card: #ffffff !important;
-    --bg-sidebar: #ffffff !important;
+    --bg-sidebar: #f8fafc !important;
     --border-color: #e2e8f0 !important;
-    --text-main: #000000 !important;
-    --text-muted: #333333 !important;
-    --text-inverse: #000000 !important;
-    --primary: #000000 !important;
-    --accent: #000000 !important;
-    --sidebar-gradient: #ffffff !important;
-    --header-gradient: #ffffff !important; 
+    --text-main: #0f172a !important;
+    --text-muted: #475569 !important;
+    --text-inverse: #ffffff !important;
+    --primary: #047857 !important;
+    --accent: #1d4ed8 !important;
+    --sidebar-gradient: #f8fafc !important;
+    --header-gradient: #047857 !important; 
   }
 
-  /* Reset Body and eliminate unnecessary web spacing, force system fonts to save PDF size */
-  body, h1, h2, h3, h4, p, span, div, a, li {
-    background-color: transparent !important;
-    color: #000000 !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    text-shadow: none !important;
-    box-shadow: none !important;
-    border-color: #cccccc !important;
-  }
-  
+  /* Reset Body and eliminate unnecessary web spacing */
   body {
+    background-color: #ffffff !important;
+    color: #1a1a1a !important;
     padding: 0 !important;
     margin: 0 !important;
     font-size: 10px;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
-
-  /* Completely strip away interactive web tools, heavy decorative elements, images, and icons for ABSOLUTE MINIMUM size */
+  /* Completely strip away interactive web tools and heavy decorative elements */
   .no-print, 
   .cv-header::before, 
-  .project-group-divider::after,
-  .profile-photo-container,
-  i.fas, 
-  i.fab, 
-  i.fa {
+  .project-group-divider::after {
     display: none !important;
   }
+  
+  /* Fallback to lightweight Unicode emojis for icons in print mode to avoid loading 800KB FontAwesome */
+  i.fas, i.fab, i.fa {
+    display: inline-block !important;
+    font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif !important;
+    font-style: normal !important;
+    margin-right: 4px;
+  }
+  i.fa-phone::before { content: "📞"; }
+  i.fa-envelope::before { content: "✉️"; }
+  i.fa-linkedin::before { content: "in"; font-weight: bold; background: #0077b5; color: white; padding: 0 2px; border-radius: 2px; font-size: 0.9em; }
+  i.fa-github::before { content: "gh"; font-weight: bold; background: #333; color: white; padding: 0 2px; border-radius: 2px; font-size: 0.9em; }
+  i.fa-graduation-cap::before { content: "🎓"; }
+  i.fa-tools::before { content: "🛠️"; }
+  i.fa-certificate::before { content: "🏅"; }
+  i.fa-language::before { content: "🌐"; }
+  i.fa-project-diagram::before { content: "📂"; }
   
   /* Disable heavy rendering features that bloat PDF size */
   * {

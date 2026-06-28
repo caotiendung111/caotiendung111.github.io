@@ -1,0 +1,24 @@
+{
+  "name": "chinhsuacv",
+  "version": "1.0.0",
+  "description": "Chào bạn Dũng! Tôi đã thiết kế và lập trình hoàn chỉnh một bộ hồ sơ CV tương tác cao cấp (Interactive Web Resume) trực tiếp trong thư mục làm việc của bạn (`e:\\chinhsuacv`).",
+  "main": "print_pdf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caotiendung111/caotiendung111.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/caotiendung111/caotiendung111.github.io/issues"
+  },
+  "homepage": "https://github.com/caotiendung111/caotiendung111.github.io#readme",
+  "dependencies": {
+    "puppeteer": "^25.2.1"
+  }
+}
