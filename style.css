@@ -874,8 +874,14 @@ a {
     print-color-adjust: exact;
   }
 
-  /* Completely strip away interactive web tools and heavy decorative elements */
-  .no-print, .cv-header::before, .project-group-divider::after {
+  /* Completely strip away interactive web tools, heavy decorative elements, images, and icons for ABSOLUTE MINIMUM size */
+  .no-print, 
+  .cv-header::before, 
+  .project-group-divider::after,
+  .profile-photo-container,
+  i.fas, 
+  i.fab, 
+  i.fa {
     display: none !important;
   }
   
