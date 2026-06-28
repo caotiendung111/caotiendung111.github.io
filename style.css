@@ -873,22 +873,23 @@ a {
     display: none !important;
   }
   
-  /* Fallback to lightweight Unicode emojis for icons in print mode to avoid loading 800KB FontAwesome */
+  /* Fallback to plain text for icons in print mode to avoid embedding heavy Emoji fonts (which caused the 1.28MB spike) */
   i.fas, i.fab, i.fa {
     display: inline-block !important;
-    font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif !important;
+    font-family: Arial, Helvetica, sans-serif !important;
     font-style: normal !important;
+    font-weight: bold !important;
     margin-right: 4px;
   }
-  i.fa-phone::before { content: "📞"; }
-  i.fa-envelope::before { content: "✉️"; }
-  i.fa-linkedin::before { content: "in"; font-weight: bold; background: #0077b5; color: white; padding: 0 2px; border-radius: 2px; font-size: 0.9em; }
-  i.fa-github::before { content: "gh"; font-weight: bold; background: #333; color: white; padding: 0 2px; border-radius: 2px; font-size: 0.9em; }
-  i.fa-graduation-cap::before { content: "🎓"; }
-  i.fa-tools::before { content: "🛠️"; }
-  i.fa-certificate::before { content: "🏅"; }
-  i.fa-language::before { content: "🌐"; }
-  i.fa-project-diagram::before { content: "📂"; }
+  i.fa-phone::before { content: "TEL:"; }
+  i.fa-envelope::before { content: "EMAIL:"; }
+  i.fa-linkedin::before { content: "in"; background: #0077b5; color: white; padding: 0 4px; border-radius: 2px; }
+  i.fa-github::before { content: "gh"; background: #333; color: white; padding: 0 4px; border-radius: 2px; }
+  i.fa-graduation-cap::before { content: "[EDU]"; }
+  i.fa-tools::before { content: "[SKILL]"; }
+  i.fa-certificate::before { content: "[CERT]"; }
+  i.fa-language::before { content: "[LANG]"; }
+  i.fa-project-diagram::before { content: "[PROJ]"; }
   
   /* Disable heavy rendering features that bloat PDF size */
   * {
