@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateThemeButtonUI(theme) {
     const icon = themeToggleBtn.querySelector('i');
     const text = themeToggleBtn.querySelector('span');
-    const currentLang = localStorage.getItem('cv-lang') || 'en';
+    const currentLang = localStorage.getItem('cv-lang') || 'ja';
     
     if (theme === 'dark') {
       icon.className = 'fas fa-sun';
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const printPdfBtn = document.getElementById('print-pdf');
   
   printPdfBtn.addEventListener('click', () => {
-    const currentLang = localStorage.getItem('cv-lang') || 'en';
+    const currentLang = localStorage.getItem('cv-lang') || 'ja';
     const confirmText = (window.translations && translations[currentLang] && translations[currentLang]['print_confirm_text']) 
       ? translations[currentLang]['print_confirm_text'] 
       : "Click OK to open the Print Dialog.\n\nFor a perfect CV export:\n1. Set Destination to 'Save as PDF'.\n2. Enable 'Background graphics' (so theme highlights load correctly).\n3. Disable 'Headers and footers' (to remove browser links).";
@@ -128,8 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
   const langButtons = document.querySelectorAll('.lang-btn');
   
-  // Set initial language from localStorage or default to 'en'
-  const initialLang = localStorage.getItem('cv-lang') || 'en';
+  // Set initial language from localStorage or default to 'ja'
+  const initialLang = localStorage.getItem('cv-lang') || 'ja';
   setLanguage(initialLang);
   
   langButtons.forEach(btn => {
