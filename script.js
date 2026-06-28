@@ -97,14 +97,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const printPdfBtn = document.getElementById('print-pdf');
   
   printPdfBtn.addEventListener('click', () => {
-    const currentLang = localStorage.getItem('cv-lang') || 'ja';
-    const confirmText = (window.translations && translations[currentLang] && translations[currentLang]['print_confirm_text']) 
-      ? translations[currentLang]['print_confirm_text'] 
-      : "Click OK to open the Print Dialog.\n\nFor a perfect CV export:\n1. Set Destination to 'Save as PDF'.\n2. Enable 'Background graphics' (so theme highlights load correctly).\n3. Disable 'Headers and footers' (to remove browser links).";
-    
-    if (confirm(confirmText)) {
-      window.print();
-    }
+    // To bypass browser font embedding limits (which forces >1MB size for Japanese),
+    // we serve the pre-optimized lossless PNG-based PDF (483KB) directly.
+    const link = document.createElement('a');
+    link.href = 'CaoTienDung_CV_Japanese.pdf';
+    link.download = 'CaoTienDung_CV_Japanese.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   });
 
   // ==========================================================================
