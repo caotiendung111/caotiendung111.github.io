@@ -284,64 +284,208 @@ footer {
   box-shadow: var(--shadow);
 }
 
-/* Cards (Projects, Certs) */
+/* Cards (Projects, Certs, Coursework) */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 35px;
 }
 
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
   box-shadow: var(--shadow);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
+
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   box-shadow: var(--shadow-hover);
+  border-color: var(--primary);
 }
-.card-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  background: var(--border-color);
+
+.card-tech-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: rgba(37, 99, 235, 0.05);
+  border-bottom: 1px solid var(--border-color);
 }
+
+.card-category-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary);
+}
+
+.card-year-badge {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-main);
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
 .card-body {
-  padding: 20px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
+
 .card-title {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.3;
+  color: var(--text-main);
 }
+
 .card-desc {
   color: var(--text-muted);
   font-size: 0.95rem;
-  margin-bottom: 20px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  flex: 1;
 }
+
+.card-metric {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(56, 189, 248, 0.1);
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  width: fit-content;
+}
+
 .card-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
+
 .card-tag {
-  font-size: 0.8rem;
-  padding: 4px 8px;
+  font-size: 0.78rem;
+  padding: 4px 10px;
   background: var(--bg-main);
-  border-radius: 4px;
-  color: var(--primary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-main);
   font-weight: 500;
 }
-.card-links a {
-  font-size: 1.2rem;
-  color: var(--text-main);
-  margin-right: 15px;
+
+.card-footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
 }
-.card-links a:hover {
+
+.card-footer-link i {
+  transition: transform 0.2s ease;
+}
+
+.card:hover .card-footer-link i.fa-arrow-right {
+  transform: translateX(4px);
+}
+
+/* Certifications Box */
+.cert-icon-wrapper {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+/* Coursework Card Styles */
+.course-category-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.course-category-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.course-category-header i {
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+
+.course-category-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.course-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.course-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: var(--bg-main);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  border: 1px solid var(--border-color);
+}
+
+.course-name {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.course-grade {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(37, 99, 235, 0.15);
   color: var(--primary);
 }
 

@@ -91,11 +91,11 @@ function getFallbackNavbar() {
       <div class="nav-container">
         <a href="index.html" class="nav-logo">CaoTien<span>Dung</span></a>
         <ul class="nav-menu" id="nav-menu">
-          <li class="nav-item"><a href="index.html">Trang chủ</a></li>
-          <li class="nav-item"><a href="about.html">Giới thiệu</a></li>
-          <li class="nav-item"><a href="projects.html">Dự án</a></li>
-          <li class="nav-item"><a href="certifications.html">Chứng chỉ</a></li>
-          <li class="nav-item"><a href="contact.html">Liên hệ</a></li>
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+          <li class="nav-item"><a href="projects.html">Projects</a></li>
+          <li class="nav-item"><a href="certifications.html">Certifications</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
         </ul>
         <div style="display:flex; align-items:center; gap:15px;">
           <button class="theme-toggle" id="theme-toggle"><i class="fas fa-sun"></i></button>
