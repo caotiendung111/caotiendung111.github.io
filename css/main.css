@@ -246,8 +246,12 @@ footer {
   font-size: 0.9rem;
 }
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   line-height: 1.2;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .hero p {
   font-size: 1.1rem;
