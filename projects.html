@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dự án | Cao Tiến Dũng</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <main>
+    <section class="section container">
+      <h2 class="section-title">Dự án Kỹ thuật</h2>
+      <p class="section-subtitle">Tập hợp các giải pháp từ hệ thống nhúng thực tế đến thuật toán AI tiên tiến</p>
+
+      <!-- Filter Tabs -->
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Tất cả</button>
+        <button class="filter-btn" data-filter="embedded">Embedded & IoT</button>
+        <button class="filter-btn" data-filter="ai">AI & Deep Learning</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid" id="projects-grid">
+        
+        <!-- Project 1 -->
+        <article class="card project-card-item" data-category="ai">
+          <div class="card-img" style="background: url('https://images.unsplash.com/photo-1610812269389-9a101f350c37?w=500&q=80') center/cover;"></div>
+          <div class="card-body">
+            <h4 class="card-title">TrafficAI — LPR & Smart Vehicle Monitoring</h4>
+            <div class="card-tags">
+              <span class="card-tag">YOLOv8</span>
+              <span class="card-tag">OpenVINO</span>
+              <span class="card-tag">FastAPI</span>
+            </div>
+            <p class="card-desc">Hệ thống bãi đỗ xe thông minh chuyên nghiệp đếm số lượng xe và nhận dạng biển số tự động thời gian thực với độ trễ cực thấp trên Edge CPU.</p>
+            <div class="card-links">
+              <a href="https://github.com/caotiendung111/AI-Traffic-Intelligence-Revenue-Ecosystem_MonTriTueNhanTao" target="_blank" title="Xem GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="card project-card-item" data-category="ai">
+          <div class="card-img" style="background: url('https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=500&q=80') center/cover;"></div>
+          <div class="card-body">
+            <h4 class="card-title">DeepLock Pro — Sinh trắc học & Anti-Spoofing</h4>
+            <div class="card-tags">
+              <span class="card-tag">OpenCV</span>
+              <span class="card-tag">AES-128</span>
+              <span class="card-tag">Liveness Analysis</span>
+            </div>
+            <p class="card-desc">Hệ thống xác thực khuôn mặt tích hợp công nghệ chống giả mạo hình ảnh (EAR/Head Pose) và mã hóa cơ sở dữ liệu khuôn mặt an toàn tuyệt đối.</p>
+            <div class="card-links">
+              <a href="https://github.com/caotiendung111/BioGuard_Face_Security_Mon_Tri_Tue_Nhan_Tao" target="_blank" title="Xem GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="card project-card-item" data-category="ai">
+          <div class="card-img" style="background: url('https://images.unsplash.com/photo-1633412802994-5c058f151b66?w=500&q=80') center/cover;"></div>
+          <div class="card-body">
+            <h4 class="card-title">DeepGuard — Nhận diện Deepfake</h4>
+            <div class="card-tags">
+              <span class="card-tag">PyTorch</span>
+              <span class="card-tag">EfficientNet</span>
+              <span class="card-tag">Grad-CAM++</span>
+            </div>
+            <p class="card-desc">Mạng nơ-ron chuyên sâu phân tích và phát hiện khuôn mặt bị cắt ghép kỹ thuật số (Deepfake). Đạt 0.985 AUC-ROC. Có bản đồ nhiệt XAI giải thích quyết định.</p>
+            <div class="card-links">
+              <a href="https://github.com/caotiendung111/DeepGuard-Deepfake-Detection" target="_blank" title="Xem GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="card project-card-item" data-category="embedded">
+          <div class="card-img" style="background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=80') center/cover;"></div>
+          <div class="card-body">
+            <h4 class="card-title">Băng chuyền Phân loại Tự động (PBL4)</h4>
+            <div class="card-tags">
+              <span class="card-tag">STM32 / ESP32</span>
+              <span class="card-tag">C++ OOP</span>
+              <span class="card-tag">Firebase</span>
+            </div>
+            <p class="card-desc">Hệ thống phân loại sản phẩm công nghiệp thực tế. Kết nối STM32 điều khiển motor với ESP32 đồng bộ dữ liệu đám mây thời gian thực.</p>
+            <div class="card-links">
+              <a href="#" title="Demo (Không có link)"><i class="fas fa-video"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="card project-card-item" data-category="embedded">
+          <div class="card-img" style="background: url('https://images.unsplash.com/photo-1592504930193-27038db46b14?w=500&q=80') center/cover;"></div>
+          <div class="card-body">
+            <h4 class="card-title">FireGuard IoT — Cảnh báo Cháy thông minh</h4>
+            <div class="card-tags">
+              <span class="card-tag">ESP32</span>
+              <span class="card-tag">Temporal Filtering</span>
+              <span class="card-tag">Telegram API</span>
+            </div>
+            <p class="card-desc">Hệ thống báo cháy kết nối cảm biến nhúng và camera xử lý ảnh. Bộ lọc đa khung hình giúp giảm 90% báo khói giả mạo, tự động nhắn tin cảnh báo khẩn cấp.</p>
+            <div class="card-links">
+              <a href="#" title="Demo (Không có link)"><i class="fas fa-video"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="card project-card-item" data-category="embedded">
+          <div class="card-img" style="background: url('https://images.unsplash.com/photo-1620288602280-49633e680a14?w=500&q=80') center/cover;"></div>
+          <div class="card-body">
+            <h4 class="card-title">Mạch Khuếch đại Âm thanh OCL</h4>
+            <div class="card-tags">
+              <span class="card-tag">Proteus</span>
+              <span class="card-tag">Altium Designer</span>
+              <span class="card-tag">PCB</span>
+            </div>
+            <p class="card-desc">Nghiên cứu, mô phỏng và tự tay thi công phần cứng mạch amply analog OCL công suất lớn với độ méo tiếng thấp (Zero cross-over distortion).</p>
+            <div class="card-links">
+              <a href="#" title="Demo (Không có link)"><i class="fas fa-microchip"></i></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Cao Tien Dung. Crafted with passion.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
