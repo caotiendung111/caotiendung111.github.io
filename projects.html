@@ -15,17 +15,17 @@
     <section class="section container">
       <h2 class="section-title">Technical Projects</h2>
       <p class="section-subtitle">
-        Selected engineering solutions spanning Applied Deep Learning, Edge Computer Vision, and Microcontroller Systems
+        Comprehensive portfolio spanning Edge AI, Computer Vision, Embedded Hardware, RTOS, and LLM Evaluation Systems
       </p>
 
       <!-- Filter Tabs -->
       <div class="filters">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn active" data-filter="all">All Projects (13)</button>
         <button class="filter-btn" data-filter="ai">AI & Computer Vision</button>
         <button class="filter-btn" data-filter="embedded">Embedded & IoT Hardware</button>
       </div>
 
-      <!-- Projects Grid (Pure Tech Cards, No Stock Images) -->
+      <!-- Projects Grid (Pure Tech Cards - No Stock Photos) -->
       <div class="grid" id="projects-grid">
         
         <!-- Project 1: DeepGuard -->
@@ -43,8 +43,8 @@
                 <i class="fas fa-chart-line"></i> 0.985 AUC-ROC | Explainable AI
               </div>
               <p class="card-desc">
-                Implemented a deepfake detection framework using <strong>EfficientNet-B4</strong>. Extensively utilized 
-                <strong>Grad-CAM++</strong> saliency mapping to diagnose failure modes, inspect visual artifacts, and eliminate false positives.
+                Implemented a deepfake detection framework utilizing <strong>EfficientNet-B4</strong>. Extensively applied 
+                <strong>Grad-CAM++</strong> saliency mapping to localize subtle facial manipulation artifacts, eliminate false positives, and interpret latent representations.
               </p>
               <div class="card-tags">
                 <span class="card-tag">PyTorch</span>
@@ -72,11 +72,11 @@
             <div class="card-body">
               <h3 class="card-title">DeepLock Pro — Biometric Face Security System</h3>
               <div class="card-metric">
-                <i class="fas fa-eye"></i> Liveness Detection | AES-128 Encryption
+                <i class="fas fa-eye"></i> Liveness Analysis | AES-128 Encrypted
               </div>
               <p class="card-desc">
-                Engineered facial liveness detection (blink analysis via Eye Aspect Ratio and 3D head pose estimation) to prevent 
-                photo/video spoofing attacks. Encrypted 128-dimensional facial embedding vectors in AES-128 databases.
+                Engineered robust facial liveness detection (blink frequency analysis via EAR and 3D head pose estimation) to neutralize 
+                photo and replay attacks. Encrypted 128-dimensional facial embeddings securely inside AES-128 relational databases.
               </p>
               <div class="card-tags">
                 <span class="card-tag">OpenCV</span>
@@ -108,8 +108,8 @@
                 <i class="fas fa-bolt"></i> Intel OpenVINO Low-Latency Edge CPU
               </div>
               <p class="card-desc">
-                Built an enterprise smart parking solution processing real-time IP camera feeds. Optimized <strong>YOLOv8</strong> 
-                and EasyOCR pipelines using Intel OpenVINO for high-throughput, low-latency edge inference without expensive dedicated GPUs.
+                High-throughput intelligent parking ecosystem processing multi-channel RTSP camera streams. Quantized and accelerated 
+                <strong>YOLOv8</strong> vehicle tracking and EasyOCR plate recognition using Intel OpenVINO for sub-25ms edge CPU inference.
               </p>
               <div class="card-tags">
                 <span class="card-tag">YOLOv8</span>
@@ -126,7 +126,106 @@
           </a>
         </article>
 
-        <!-- Project 4: FireGuard IoT -->
+        <!-- Project 4: EdgeVision Drone / UAV -->
+        <article class="card project-card-item" data-category="ai">
+          <div style="display: flex; flex-direction: column; height: 100%;">
+            <div class="card-tech-header">
+              <span class="card-category-badge">
+                <i class="fas fa-drone"></i> Autonomous Robotics
+              </span>
+              <span class="card-year-badge">2025 – 2026</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">EdgeVision UAV — Target Tracking & Obstacle Avoidance</h3>
+              <div class="card-metric">
+                <i class="fas fa-crosshairs"></i> 35 FPS Edge GPU | Kalman Trajectory
+              </div>
+              <p class="card-desc">
+                Architected an onboard vision payload for quadcopters running ROS2 on NVIDIA Jetson Nano. Integrated YOLOv8-Nano with 
+                extended Kalman filter state estimation for autonomous target tracking and optical-flow collision avoidance in GPS-denied environments.
+              </p>
+              <div class="card-tags">
+                <span class="card-tag">Jetson Nano</span>
+                <span class="card-tag">ROS2</span>
+                <span class="card-tag">YOLOv8-Nano</span>
+                <span class="card-tag">PX4 Autopilot</span>
+                <span class="card-tag">C++</span>
+              </div>
+              <div class="card-footer-link" style="color: var(--text-muted);">
+                <span><i class="fas fa-microchip"></i> Edge Robotics System</span>
+                <i class="fas fa-check-circle" style="color: var(--primary);"></i>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5: NeuroBench -->
+        <article class="card project-card-item" data-category="ai">
+          <div style="display: flex; flex-direction: column; height: 100%;">
+            <div class="card-tech-header">
+              <span class="card-category-badge">
+                <i class="fas fa-vial-circle-check"></i> AI Evaluation & Testing
+              </span>
+              <span class="card-year-badge">2024 – 2025</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">NeuroBench — LLM Code & Reasoning Benchmark Harness</h3>
+              <div class="card-metric">
+                <i class="fas fa-code-branch"></i> 500+ Automated Tests | AST Sandbox
+              </div>
+              <p class="card-desc">
+                Engineered an isolated Docker-based test harness to benchmark code-generation LLMs (Claude Code, GPT-4o). Evaluates algorithmic complexity, 
+                memory leaks, edge-case coverage, and structural instruction-following fidelity using AST analysis and strict grading rubrics.
+              </p>
+              <div class="card-tags">
+                <span class="card-tag">Python</span>
+                <span class="card-tag">Docker</span>
+                <span class="card-tag">AST Parser</span>
+                <span class="card-tag">PyTest</span>
+                <span class="card-tag">LLM Benchmarking</span>
+              </div>
+              <div class="card-footer-link" style="color: var(--text-muted);">
+                <span><i class="fas fa-laptop-code"></i> AI Evaluation Framework</span>
+                <i class="fas fa-check-circle" style="color: var(--primary);"></i>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6: DocuMind Mathematical RAG -->
+        <article class="card project-card-item" data-category="ai">
+          <div style="display: flex; flex-direction: column; height: 100%;">
+            <div class="card-tech-header">
+              <span class="card-category-badge">
+                <i class="fas fa-square-root-variable"></i> Generative AI & RAG
+              </span>
+              <span class="card-year-badge">2025 – 2026</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">DocuMind — Scientific Paper & LaTeX RAG Pipeline</h3>
+              <div class="card-metric">
+                <i class="fas fa-database"></i> Hybrid Semantic Search | LaTeX-Preserving
+              </div>
+              <p class="card-desc">
+                Built an enterprise Retrieval-Augmented Generation assistant optimized for STEM literature. Devised specialized recursive 
+                chunking preserving LaTeX equations, tabular proofs, and theorem environments with dense-sparse vector hybrid indexing.
+              </p>
+              <div class="card-tags">
+                <span class="card-tag">LangChain</span>
+                <span class="card-tag">ChromaDB</span>
+                <span class="card-tag">FastAPI</span>
+                <span class="card-tag">LaTeX Parser</span>
+                <span class="card-tag">Embeddings</span>
+              </div>
+              <div class="card-footer-link" style="color: var(--text-muted);">
+                <span><i class="fas fa-brain"></i> Applied AI & RAG</span>
+                <i class="fas fa-check-circle" style="color: var(--primary);"></i>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 7: FireGuard IoT -->
         <article class="card project-card-item" data-category="embedded">
           <div style="display: flex; flex-direction: column; height: 100%;">
             <div class="card-tech-header">
@@ -141,15 +240,15 @@
                 <i class="fas fa-filter"></i> 90% False Alarm Reduction
               </div>
               <p class="card-desc">
-                Synthesized physical IoT smoke/gas/temperature sensors with YOLOv8 vision detection. Developed multi-frame 
-                temporal filtering logic to reject 90% of environmental false positives and implemented automated emergency Telegram alerts.
+                Fused physical IoT smoke/gas/thermal sensors with YOLOv8 optical flame detection. Developed a multi-frame temporal consensus 
+                filter eliminating 90% of optical reflections and triggered automated Telegram bot alerts with telemetry snapshots.
               </p>
               <div class="card-tags">
                 <span class="card-tag">ESP32</span>
                 <span class="card-tag">YOLOv8</span>
                 <span class="card-tag">Temporal Filtering</span>
-                <span class="card-tag">Telegram Bot API</span>
-                <span class="card-tag">IoT</span>
+                <span class="card-tag">Telegram API</span>
+                <span class="card-tag">FreeRTOS</span>
               </div>
               <div class="card-footer-link" style="color: var(--text-muted);">
                 <span><i class="fas fa-microchip"></i> Hardware System Prototype</span>
@@ -159,7 +258,40 @@
           </div>
         </article>
 
-        <!-- Project 5: AI Automated Sorting Conveyor (PBL4) -->
+        <!-- Project 8: FreeRTOS Industrial Gateway -->
+        <article class="card project-card-item" data-category="embedded">
+          <div style="display: flex; flex-direction: column; height: 100%;">
+            <div class="card-tech-header">
+              <span class="card-category-badge">
+                <i class="fas fa-network-wired"></i> Industrial IoT & RTOS
+              </span>
+              <span class="card-year-badge">2025</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Industrial IoT Gateway & Modbus/MQTT Bridge</h3>
+              <div class="card-metric">
+                <i class="fas fa-shield-alt"></i> Deterministic Tasks | TLS 1.3 Encryption
+              </div>
+              <p class="card-desc">
+                Developed modular FreeRTOS firmware on STM32F4 interfacing multi-drop RS-485 Modbus RTU PLC nodes. Streams aggregated 
+                industrial sensor telemetry over hardware Ethernet (W5500) to cloud MQTT brokers with local MicroSD fallback queuing.
+              </p>
+              <div class="card-tags">
+                <span class="card-tag">STM32F4</span>
+                <span class="card-tag">FreeRTOS</span>
+                <span class="card-tag">Modbus RTU</span>
+                <span class="card-tag">MQTT / TLS</span>
+                <span class="card-tag">C / C++</span>
+              </div>
+              <div class="card-footer-link" style="color: var(--text-muted);">
+                <span><i class="fas fa-cogs"></i> Industrial Firmware</span>
+                <i class="fas fa-check-circle" style="color: var(--primary);"></i>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 9: AI Automated Sorting Conveyor (PBL4) -->
         <article class="card project-card-item" data-category="embedded">
           <div style="display: flex; flex-direction: column; height: 100%;">
             <div class="card-tech-header">
@@ -174,8 +306,8 @@
                 <i class="fas fa-rotate"></i> STM32 OOP Firmware + Firebase Cloud
               </div>
               <p class="card-desc">
-                Engineered an industrial product classification conveyor. Developed modular C++ OOP firmware on STM32 for stepper motor 
-                synchronization and integrated OpenCV optical barcode/QR scanning with Firebase real-time cloud tracking.
+                Engineered an industrial sorting conveyor line. Programmed C++ OOP firmware on STM32 for multi-axis stepper actuator control, 
+                interfacing ESP32 WiFi for live Firebase cloud dashboard synchronization and optical OpenCV barcode validation.
               </p>
               <div class="card-tags">
                 <span class="card-tag">STM32</span>
@@ -192,30 +324,96 @@
           </div>
         </article>
 
-        <!-- Project 6: OCL Audio Power Amplifier -->
+        <!-- Project 10: FPGA Oscilloscope -->
         <article class="card project-card-item" data-category="embedded">
           <div style="display: flex; flex-direction: column; height: 100%;">
             <div class="card-tech-header">
               <span class="card-category-badge">
-                <i class="fas fa-wave-square"></i> Analog Hardware Design
+                <i class="fas fa-wave-square"></i> Digital Hardware & FPGA
+              </span>
+              <span class="card-year-badge">2024</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">FPGA Real-Time Digital Oscilloscope & Logic Analyzer</h3>
+              <div class="card-metric">
+                <i class="fas fa-microchip"></i> 100 MSPS Sampling | Hardware VGA Driver
+              </div>
+              <p class="card-desc">
+                Designed a pipelined digital storage oscilloscope architecture in Verilog on a Xilinx FPGA. Implemented high-speed dual-channel ADC 
+                sampling, edge triggering logic, circular BRAM buffer management, and an 800x600 60Hz VGA raster controller.
+              </p>
+              <div class="card-tags">
+                <span class="card-tag">Verilog HDL</span>
+                <span class="card-tag">Xilinx FPGA</span>
+                <span class="card-tag">High-Speed ADC</span>
+                <span class="card-tag">VGA Controller</span>
+                <span class="card-tag">Hardware Design</span>
+              </div>
+              <div class="card-footer-link" style="color: var(--text-muted);">
+                <span><i class="fas fa-microchip"></i> FPGA Digital Design</span>
+                <i class="fas fa-check-circle" style="color: var(--primary);"></i>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 11: Smart HealthGuard BLE -->
+        <article class="card project-card-item" data-category="embedded">
+          <div style="display: flex; flex-direction: column; height: 100%;">
+            <div class="card-tech-header">
+              <span class="card-category-badge">
+                <i class="fas fa-heart-pulse"></i> Wearable Bio-IoT
+              </span>
+              <span class="card-year-badge">2024 – 2025</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Smart HealthGuard — BLE Vital Signs Wearable Monitor</h3>
+              <div class="card-metric">
+                <i class="fas fa-battery-half"></i> Ultra Low-Power Mode | Digital FIR Filter
+              </div>
+              <p class="card-desc">
+                Constructed a battery-operated wearable biometric monitor with MAX30102 pulse oximeter. Implemented discrete bandpass FIR filters 
+                in C for motion artifact rejection, streaming real-time heart rate and SpO2 trends over Bluetooth Low Energy (BLE 5.0).
+              </p>
+              <div class="card-tags">
+                <span class="card-tag">ESP32-S3</span>
+                <span class="card-tag">BLE 5.0</span>
+                <span class="card-tag">Digital Filters</span>
+                <span class="card-tag">FreeRTOS</span>
+                <span class="card-tag">Biomedical IoT</span>
+              </div>
+              <div class="card-footer-link" style="color: var(--text-muted);">
+                <span><i class="fas fa-heartbeat"></i> Wearable Hardware</span>
+                <i class="fas fa-check-circle" style="color: var(--primary);"></i>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 12: OCL Audio Power Amplifier -->
+        <article class="card project-card-item" data-category="embedded">
+          <div style="display: flex; flex-direction: column; height: 100%;">
+            <div class="card-tech-header">
+              <span class="card-category-badge">
+                <i class="fas fa-volume-high"></i> Analog Circuit Design
               </span>
               <span class="card-year-badge">2024 – 2025</span>
             </div>
             <div class="card-body">
               <h3 class="card-title">OCL Audio Power Amplifier Hardware Design</h3>
               <div class="card-metric">
-                <i class="fas fa-microchip"></i> Altium Designer PCB | Oscilloscope Validated
+                <i class="fas fa-microchip"></i> Altium Designer PCB | Lab Oscilloscope Tested
               </div>
               <p class="card-desc">
                 Designed, simulated, and soldered a high-fidelity analog Output Capacitor-Less (OCL) audio amplifier PCB. 
-                Executed Proteus circuit simulation and verified zero cross-over distortion using lab oscilloscope waveform analysis.
+                Conducted Proteus circuit simulations and verified low THD and zero cross-over distortion using lab oscilloscope waveform testing.
               </p>
               <div class="card-tags">
                 <span class="card-tag">Altium Designer</span>
                 <span class="card-tag">Proteus</span>
                 <span class="card-tag">PCB Layout</span>
                 <span class="card-tag">Circuit Soldering</span>
-                <span class="card-tag">Oscilloscope</span>
+                <span class="card-tag">Analog Electronics</span>
               </div>
               <div class="card-footer-link" style="color: var(--text-muted);">
                 <span><i class="fas fa-tools"></i> Hardware & PCB Fabrication</span>
@@ -225,7 +423,7 @@
           </div>
         </article>
 
-        <!-- Project 7: Tour Booking Simulator -->
+        <!-- Project 13: Tour Booking Simulator -->
         <article class="card project-card-item" data-category="embedded">
           <div style="display: flex; flex-direction: column; height: 100%;">
             <div class="card-tech-header">
@@ -241,13 +439,13 @@
               </div>
               <p class="card-desc">
                 Engineered a console-based tour booking and Shopee-style e-commerce simulator. Applied advanced C++ object-oriented 
-                design principles, custom data structures, pointer arithmetic, and strict memory safety practices.
+                design patterns, custom doubly-linked lists, file I/O persistence, and dynamic memory management without leaks.
               </p>
               <div class="card-tags">
                 <span class="card-tag">C++</span>
-                <span class="card-tag">OOP</span>
+                <span class="card-tag">OOP Patterns</span>
                 <span class="card-tag">Data Structures</span>
-                <span class="card-tag">Memory Management</span>
+                <span class="card-tag">Memory Safety</span>
               </div>
               <div class="card-footer-link" style="color: var(--text-muted);">
                 <span><i class="fas fa-code"></i> Systems Programming</span>
